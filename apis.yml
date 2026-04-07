@@ -16,10 +16,10 @@ apis:
     humanURL: https://developers.google.com/docs
     baseURL: https://docs.googleapis.com
     tags:
-      - documents
-      - word processing
-      - collaboration
-      - productivity
+      - Collaboration
+      - Documents
+      - Productivity
+      - Word Processing
     properties:
       - type: Documentation
         url: https://developers.google.com/docs/api
@@ -40,10 +40,10 @@ apis:
     humanURL: https://developers.google.com/sheets
     baseURL: https://sheets.googleapis.com
     tags:
-      - spreadsheets
-      - data
-      - analytics
-      - productivity
+      - Analytics
+      - Data
+      - Productivity
+      - Spreadsheets
     properties:
       - type: Documentation
         url: https://developers.google.com/sheets/api
@@ -66,10 +66,10 @@ apis:
     humanURL: https://developers.google.com/slides
     baseURL: https://slides.googleapis.com
     tags:
-      - presentations
-      - slides
-      - collaboration
-      - productivity
+      - Collaboration
+      - Presentations
+      - Productivity
+      - Slides
     properties:
       - type: Documentation
         url: https://developers.google.com/slides/api
@@ -92,10 +92,10 @@ apis:
     humanURL: https://developers.google.com/gmail
     baseURL: https://gmail.googleapis.com
     tags:
-      - email
-      - messaging
-      - communication
-      - productivity
+      - Communication
+      - Email
+      - Messaging
+      - Productivity
     properties:
       - type: Documentation
         url: https://developers.google.com/gmail/api
@@ -128,9 +128,9 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 tags:
-  - productivity
-  - collaboration
-  - google
-  - workspace
-  - documents
-  - cloud
+  - Cloud
+  - Collaboration
+  - Documents
+  - Google
+  - Productivity
+  - Workspace
