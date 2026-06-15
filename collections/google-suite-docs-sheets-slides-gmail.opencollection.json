@@ -1,0 +1,511 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Workspace Suite (Docs, Sheets, Slides, Gmail)",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Docs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a Google Doc",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://docs.googleapis.com/v1/documents",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a Google Doc"
+        },
+        {
+          "info": {
+            "name": "Get a document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/v1/documents/:documentId",
+            "params": [
+              {
+                "name": "documentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a document"
+        },
+        {
+          "info": {
+            "name": "Batch update a document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://docs.googleapis.com/v1/documents/:documentId:batchUpdate",
+            "params": [
+              {
+                "name": "documentId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch update a document"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Sheets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a spreadsheet",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://docs.googleapis.com/v4/spreadsheets",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a spreadsheet"
+        },
+        {
+          "info": {
+            "name": "Get a spreadsheet",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/v4/spreadsheets/:spreadsheetId",
+            "params": [
+              {
+                "name": "spreadsheetId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "ranges",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a spreadsheet"
+        },
+        {
+          "info": {
+            "name": "Get values in a range",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/v4/spreadsheets/:spreadsheetId/values/:range",
+            "params": [
+              {
+                "name": "spreadsheetId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "range",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get values in a range"
+        },
+        {
+          "info": {
+            "name": "Update values in a range",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://docs.googleapis.com/v4/spreadsheets/:spreadsheetId/values/:range",
+            "params": [
+              {
+                "name": "spreadsheetId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "range",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "valueInputOption",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update values in a range"
+        },
+        {
+          "info": {
+            "name": "Batch update a spreadsheet",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://docs.googleapis.com/v4/spreadsheets/:spreadsheetId:batchUpdate",
+            "params": [
+              {
+                "name": "spreadsheetId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch update a spreadsheet"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Slides",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a presentation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://docs.googleapis.com/v1/presentations",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a presentation"
+        },
+        {
+          "info": {
+            "name": "Get a presentation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/v1/presentations/:presentationId",
+            "params": [
+              {
+                "name": "presentationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a presentation"
+        },
+        {
+          "info": {
+            "name": "Batch update a presentation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://docs.googleapis.com/v1/presentations/:presentationId:batchUpdate",
+            "params": [
+              {
+                "name": "presentationId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch update a presentation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Gmail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get user profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/profile",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get user profile"
+        },
+        {
+          "info": {
+            "name": "List messages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/messages",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pageToken",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "labelIds",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List messages"
+        },
+        {
+          "info": {
+            "name": "Get a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/messages/:id",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a message"
+        },
+        {
+          "info": {
+            "name": "Send a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/messages/send",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Send a message"
+        },
+        {
+          "info": {
+            "name": "List threads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/threads",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List threads"
+        },
+        {
+          "info": {
+            "name": "Get a thread",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/threads/:id",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a thread"
+        },
+        {
+          "info": {
+            "name": "List labels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/labels",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List labels"
+        },
+        {
+          "info": {
+            "name": "Create label",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/labels",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create label"
+        },
+        {
+          "info": {
+            "name": "List drafts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/drafts",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List drafts"
+        },
+        {
+          "info": {
+            "name": "Create draft",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://docs.googleapis.com/gmail/v1/users/:userId/drafts",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create draft"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
