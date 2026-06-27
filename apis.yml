@@ -51,7 +51,7 @@ apis:
         url: https://sheets.googleapis.com/$discovery/rest?version=v4
       - type: Authentication
         url: https://developers.google.com/sheets/api/guides/authorizing
-      - type: Quickstart
+      - type: GettingStarted
         url: https://developers.google.com/sheets/api/quickstart
       - type: Pricing
         url: https://developers.google.com/sheets/api/limits
