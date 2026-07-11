@@ -114,6 +114,12 @@ apis:
         email: workspace-apis@google.com
         url: https://developers.google.com/gmail/api/support
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-suite-docs-sheets-slides-gmail-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-suite-docs-sheets-slides-gmail-domain-security.yml
+  - type: Authentication
+    url: authentication/google-suite-docs-sheets-slides-gmail-authentication.yml
   - type: OAuthScopes
     url: scopes/google-suite-docs-sheets-slides-gmail-scopes.yml
   - type: GitHubOrganization
