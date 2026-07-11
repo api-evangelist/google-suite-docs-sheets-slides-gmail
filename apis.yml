@@ -114,6 +114,8 @@ apis:
         email: workspace-apis@google.com
         url: https://developers.google.com/gmail/api/support
 common:
+  - type: OAuthScopes
+    url: scopes/google-suite-docs-sheets-slides-gmail-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/googleworkspace
   - type: LinkedIn
@@ -130,6 +132,8 @@ common:
     url: https://www.google.com/appsstatus
   - type: Integrations
     url: https://workspace.google.com/integrations/
+  - url: https://workspaceupdates.googleblog.com/feeds/posts/default?alt=rss
+    type: Blog
 integrations:
   - name: Gmail
   - name: Drive

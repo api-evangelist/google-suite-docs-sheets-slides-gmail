@@ -1,0 +1,47 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/google-suite-docs-sheets-slides-gmail-openapi.yml
+schemes:
+- name: googleOAuth
+  source: openapi/google-suite-docs-sheets-slides-gmail-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+    tokenUrl: https://oauth2.googleapis.com/token
+scopes:
+- scope: https://www.googleapis.com/auth/documents
+  description: Read/write Google Docs
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-docs-sheets-slides-gmail-openapi.yml
+- scope: https://www.googleapis.com/auth/gmail.modify
+  description: Read/write Gmail (no permanent delete)
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-docs-sheets-slides-gmail-openapi.yml
+- scope: https://www.googleapis.com/auth/gmail.readonly
+  description: Read-only access to Gmail
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-docs-sheets-slides-gmail-openapi.yml
+- scope: https://www.googleapis.com/auth/gmail.send
+  description: Send mail on behalf of user
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-docs-sheets-slides-gmail-openapi.yml
+- scope: https://www.googleapis.com/auth/presentations
+  description: Read/write Google Slides
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-docs-sheets-slides-gmail-openapi.yml
+- scope: https://www.googleapis.com/auth/spreadsheets
+  description: Read/write Google Sheets
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-suite-docs-sheets-slides-gmail-openapi.yml
