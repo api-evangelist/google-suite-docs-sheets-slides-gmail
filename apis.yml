@@ -114,6 +114,8 @@ apis:
         email: workspace-apis@google.com
         url: https://developers.google.com/gmail/api/support
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-suite-docs-sheets-slides-gmail-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-suite-docs-sheets-slides-gmail-vulnerability-disclosure.yml
   - type: DomainSecurity
