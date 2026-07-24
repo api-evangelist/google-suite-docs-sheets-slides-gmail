@@ -1,0 +1,112 @@
+openapi: 3.1.0
+info:
+  title: Google Workspace Suite (, Sheets, Slides, Gmail) Docs API
+  description: Best-effort OpenAPI 3.1 covering the most commonly used REST endpoints across the Google Docs API (docs.googleapis.com), Google Sheets API (sheets.googleapis.com), Google Slides API (slides.googleapis.com), and the Gmail API (gmail.googleapis.com). All services use Google OAuth 2.0 user or service-account credentials.
+  version: v1
+servers:
+- url: https://docs.googleapis.com
+  description: Google Docs API
+- url: https://sheets.googleapis.com
+  description: Google Sheets API
+- url: https://slides.googleapis.com
+  description: Google Slides API
+- url: https://gmail.googleapis.com
+  description: Gmail API
+security:
+- googleOAuth: []
+tags:
+- name: Docs
+paths:
+  /v1/documents:
+    post:
+      tags:
+      - Docs
+      summary: Create a Google Doc
+      operationId: docs.documents.create
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Document'
+      responses:
+        '200':
+          description: Document created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+  /v1/documents/{documentId}:
+    get:
+      tags:
+      - Docs
+      summary: Get a document
+      operationId: docs.documents.get
+      parameters:
+      - in: path
+        name: documentId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Document
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+  /v1/documents/{documentId}:batchUpdate:
+    post:
+      tags:
+      - Docs
+      summary: Batch update a document
+      operationId: docs.documents.batchUpdate
+      parameters:
+      - in: path
+        name: documentId
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                requests:
+                  type: array
+                  items:
+                    type: object
+                writeControl:
+                  type: object
+      responses:
+        '200':
+          description: Batch update result
+components:
+  schemas:
+    Document:
+      type: object
+      properties:
+        documentId:
+          type: string
+        title:
+          type: string
+        body:
+          type: object
+        revisionId:
+          type: string
+  securitySchemes:
+    googleOAuth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/documents: Read/write Google Docs
+            https://www.googleapis.com/auth/spreadsheets: Read/write Google Sheets
+            https://www.googleapis.com/auth/presentations: Read/write Google Slides
+            https://www.googleapis.com/auth/gmail.modify: Read/write Gmail (no permanent delete)
+            https://www.googleapis.com/auth/gmail.send: Send mail on behalf of user
+            https://www.googleapis.com/auth/gmail.readonly: Read-only access to Gmail
