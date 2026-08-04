@@ -1,0 +1,20 @@
+{
+  "provider": "google-suite-docs-sheets-slides-gmail",
+  "sources": [
+    "google-suite-docs-sheets-slides-gmail-docs-api-openapi.yml",
+    "google-suite-docs-sheets-slides-gmail-gmail-api-openapi.yml",
+    "google-suite-docs-sheets-slides-gmail-sheets-api-openapi.yml",
+    "google-suite-docs-sheets-slides-gmail-slides-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-suite-docs-sheets-slides-gmail-docs-api-openapi.yml",
+    "google-suite-docs-sheets-slides-gmail-gmail-api-openapi.yml",
+    "google-suite-docs-sheets-slides-gmail-sheets-api-openapi.yml",
+    "google-suite-docs-sheets-slides-gmail-slides-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
