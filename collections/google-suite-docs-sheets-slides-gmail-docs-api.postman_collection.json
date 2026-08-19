@@ -1,0 +1,348 @@
+{
+  "item": [
+    {
+      "id": "6ad3a6cb-3827-4744-adf8-18f6f7ee7821",
+      "name": "Docs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7cc8f256-a224-47e9-8397-c08d8fc1da9a",
+          "name": "Create a Google Doc",
+          "request": {
+            "name": "Create a Google Doc",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "documents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"documentId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"body\": \"<object>\",\n  \"revisionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e94c44f5-d37d-4717-aebb-888f9d5d5ab5",
+              "name": "Document created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "documents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"documentId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"body\": \"<object>\",\n  \"revisionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"documentId\": \"string\",\n  \"title\": \"string\",\n  \"body\": {},\n  \"revisionId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "32310c6c-89a4-4b52-920c-87047cb00a88",
+          "name": "Get a document",
+          "request": {
+            "name": "Get a document",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "documents",
+                ":documentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "documentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "443f9804-f38b-4a31-b166-3fe12049059a",
+              "name": "Document",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "documents",
+                    ":documentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "documentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"documentId\": \"string\",\n  \"title\": \"string\",\n  \"body\": {},\n  \"revisionId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "72b1d0af-f2b6-4e69-9274-642f68ec15b3",
+          "name": "Batch update a document",
+          "request": {
+            "name": "Batch update a document",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "documents",
+                "{{documentId}}:batchUpdate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"writeControl\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b83d4405-1e78-46c9-ab36-875b47a3f1be",
+              "name": "Batch update result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "documents",
+                    "{{documentId}}:batchUpdate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"writeControl\": \"<object>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://docs.googleapis.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "documentId"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/presentations https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/v2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "67a97164-1559-4716-bd62-8a65bc5d94c3",
+    "name": "Google Workspace Suite (, Sheets, Slides, Gmail) Docs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 covering the most commonly used REST endpoints across the Google Docs API (docs.googleapis.com), Google Sheets API (sheets.googleapis.com), Google Slides API (slides.googleapis.com), and the Gmail API (gmail.googleapis.com). All services use Google OAuth 2.0 user or service-account credentials.",
+      "type": "text/plain"
+    }
+  }
+}

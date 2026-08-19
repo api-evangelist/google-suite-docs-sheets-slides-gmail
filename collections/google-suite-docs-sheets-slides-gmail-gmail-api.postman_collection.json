@@ -1,0 +1,1175 @@
+{
+  "item": [
+    {
+      "id": "9e8b2e34-1f88-4c16-b591-905049673df6",
+      "name": "Gmail",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5ddc63cf-a993-4442-8485-0f4dafcdc82b",
+          "name": "Get user profile",
+          "request": {
+            "name": "Get user profile",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "profile"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "me",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8db86201-2dcf-48f7-bad1-51b715ef7d5e",
+              "name": "Profile",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "profile"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "me",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "27e22f25-e2ba-4480-849a-f86c22ab886b",
+          "name": "List messages",
+          "request": {
+            "name": "List messages",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "messages"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "labelIds",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "labelIds",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a43059f9-bc3f-4a51-8566-2898e7b20c5d",
+              "name": "List of messages",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "messages"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "labelIds",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "labelIds",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "43a2ae66-c5ee-4e9c-a6ca-3fc81c7951a4",
+          "name": "Get a message",
+          "request": {
+            "name": "Get a message",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "messages",
+                ":id"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d8b09368-7149-4a52-8770-6548f2562674",
+              "name": "Message",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "messages",
+                    ":id"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "baa9a002-e98d-41f1-9fe1-dc3448768aa1",
+          "name": "Send a message",
+          "request": {
+            "name": "Send a message",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "messages",
+                "send"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"threadId\": \"<string>\",\n  \"labelIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"snippet\": \"<string>\",\n  \"raw\": \"<string>\",\n  \"payload\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bf66c235-e844-4733-8e89-bfb4a4de1ce1",
+              "name": "Sent message",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "messages",
+                    "send"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"threadId\": \"<string>\",\n  \"labelIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"snippet\": \"<string>\",\n  \"raw\": \"<string>\",\n  \"payload\": \"<object>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "08af01e8-28d9-41a8-95f9-b2b8e7a55d59",
+          "name": "List threads",
+          "request": {
+            "name": "List threads",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "threads"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e97f1f39-98f2-42ef-b679-9b3f206e195e",
+              "name": "Threads",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "threads"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "34a1c25b-20c1-422d-8005-6e2d5de3a2c6",
+          "name": "Get a thread",
+          "request": {
+            "name": "Get a thread",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "threads",
+                ":id"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a5a02de3-70d6-41f7-af5a-30ef2322181a",
+              "name": "Thread",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "threads",
+                    ":id"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "18c6b736-bb85-4739-a4d6-e342d989dac2",
+          "name": "List labels",
+          "request": {
+            "name": "List labels",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "labels"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a52d4c85-8c22-41a9-ba1a-3fc900558886",
+              "name": "Labels",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "labels"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6a83c36b-13cd-47f4-a582-ee8c1a010775",
+          "name": "Create label",
+          "request": {
+            "name": "Create label",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "labels"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"labelListVisibility\": \"<string>\",\n  \"messageListVisibility\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "98a64915-6fad-4c3e-9be9-d72f593e90ac",
+              "name": "Label created",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "labels"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"labelListVisibility\": \"<string>\",\n  \"messageListVisibility\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "98e48819-4539-4fb7-b470-2ff242fe972c",
+          "name": "List drafts",
+          "request": {
+            "name": "List drafts",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "drafts"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "407a490e-def5-4e4b-929c-0cb0a7423e6d",
+              "name": "Drafts",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "drafts"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9da4afbe-0c5a-408e-9649-fc760b758811",
+          "name": "Create draft",
+          "request": {
+            "name": "Create draft",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "gmail",
+                "v1",
+                "users",
+                ":userId",
+                "drafts"
+              ],
+              "host": [
+                "gmail",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": {\n    \"id\": \"<string>\",\n    \"threadId\": \"<string>\",\n    \"labelIds\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"snippet\": \"<string>\",\n    \"raw\": \"<string>\",\n    \"payload\": \"<object>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "af2d0970-3539-4dcb-9015-5bc3ab09cf4e",
+              "name": "Draft created",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "gmail",
+                    "v1",
+                    "users",
+                    ":userId",
+                    "drafts"
+                  ],
+                  "host": [
+                    "gmail",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"message\": {\n    \"id\": \"string\",\n    \"threadId\": \"string\",\n    \"labelIds\": [\n      \"string\",\n      \"string\"\n    ],\n    \"snippet\": \"string\",\n    \"raw\": \"string\",\n    \"payload\": {}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://docs.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/presentations https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/v2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "db77296e-99e2-4236-8df8-6abb650d0cdf",
+    "name": "Google Workspace Suite (, Sheets, Slides, ) Docs Gmail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 covering the most commonly used REST endpoints across the Google Docs API (docs.googleapis.com), Google Sheets API (sheets.googleapis.com), Google Slides API (slides.googleapis.com), and the Gmail API (gmail.googleapis.com). All services use Google OAuth 2.0 user or service-account credentials.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "item": [
+    {
+      "id": "73e8780a-c04a-4e6c-9800-03d599b006bd",
+      "name": "Slides",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "98205003-f405-4d62-9250-f4a8eb322f97",
+          "name": "Create a presentation",
+          "request": {
+            "name": "Create a presentation",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v1",
+                "presentations"
+              ],
+              "host": [
+                "slides",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"presentationId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"slides\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"revisionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d2f12ffd-5ddb-492f-8d32-58679eda6856",
+              "name": "Presentation",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "presentations"
+                  ],
+                  "host": [
+                    "slides",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"presentationId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"slides\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"revisionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f88ae248-950a-4e59-91e4-593d28f352cc",
+          "name": "Get a presentation",
+          "request": {
+            "name": "Get a presentation",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v1",
+                "presentations",
+                ":presentationId"
+              ],
+              "host": [
+                "slides",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "presentationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ed534408-a2dc-427c-92e8-97fba6be4922",
+              "name": "Presentation",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "presentations",
+                    ":presentationId"
+                  ],
+                  "host": [
+                    "slides",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "presentationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8c388729-d399-4f3b-861b-d3f99ff27aa1",
+          "name": "Batch update a presentation",
+          "request": {
+            "name": "Batch update a presentation",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v1",
+                "presentations",
+                "{{presentationId}}:batchUpdate"
+              ],
+              "host": [
+                "slides",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a2fceadd-f55d-4735-bd70-36981656450e",
+              "name": "Batch update result",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "presentations",
+                    "{{presentationId}}:batchUpdate"
+                  ],
+                  "host": [
+                    "slides",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://docs.googleapis.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "presentationId"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/presentations https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/v2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c829af38-cf6c-4290-b763-28a46cade9ea",
+    "name": "Google Workspace Suite (, Sheets, , Gmail) Docs Slides API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 covering the most commonly used REST endpoints across the Google Docs API (docs.googleapis.com), Google Sheets API (sheets.googleapis.com), Google Slides API (slides.googleapis.com), and the Gmail API (gmail.googleapis.com). All services use Google OAuth 2.0 user or service-account credentials.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,621 @@
+{
+  "item": [
+    {
+      "id": "c233cfc7-fe57-4dfb-99fa-2900a0845738",
+      "name": "Sheets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bcaeb855-5856-4ea7-ae18-4d6929931e99",
+          "name": "Create a spreadsheet",
+          "request": {
+            "name": "Create a spreadsheet",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v4",
+                "spreadsheets"
+              ],
+              "host": [
+                "sheets",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"spreadsheetId\": \"<string>\",\n  \"properties\": \"<object>\",\n  \"sheets\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"spreadsheetUrl\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a1b8aa1c-1008-4745-b2f0-942ee7a96e1f",
+              "name": "Spreadsheet",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v4",
+                    "spreadsheets"
+                  ],
+                  "host": [
+                    "sheets",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"spreadsheetId\": \"<string>\",\n  \"properties\": \"<object>\",\n  \"sheets\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"spreadsheetUrl\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "caa4fe59-baa3-4aa1-ae4d-9c69a062455e",
+          "name": "Get a spreadsheet",
+          "request": {
+            "name": "Get a spreadsheet",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v4",
+                "spreadsheets",
+                ":spreadsheetId"
+              ],
+              "host": [
+                "sheets",
+                "googleapis",
+                "com"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ranges",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "ranges",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "spreadsheetId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8acfcf4e-b93d-4e34-9073-56d5817fd8e0",
+              "name": "Spreadsheet",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v4",
+                    "spreadsheets",
+                    ":spreadsheetId"
+                  ],
+                  "host": [
+                    "sheets",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "spreadsheetId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e5b6ecbe-41fc-4b04-b400-b7cdfe1300c5",
+          "name": "Get values in a range",
+          "request": {
+            "name": "Get values in a range",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v4",
+                "spreadsheets",
+                ":spreadsheetId",
+                "values",
+                ":range"
+              ],
+              "host": [
+                "sheets",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "spreadsheetId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "range",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "efd05b4a-5bf2-44c7-91ec-fe6dd020b8a9",
+              "name": "Value range",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v4",
+                    "spreadsheets",
+                    ":spreadsheetId",
+                    "values",
+                    ":range"
+                  ],
+                  "host": [
+                    "sheets",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "spreadsheetId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "range",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "804267e9-1f16-4d94-b81a-9b1fba955b76",
+          "name": "Update values in a range",
+          "request": {
+            "name": "Update values in a range",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v4",
+                "spreadsheets",
+                ":spreadsheetId",
+                "values",
+                ":range"
+              ],
+              "host": [
+                "sheets",
+                "googleapis",
+                "com"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "valueInputOption",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "spreadsheetId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "range",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"range\": \"<string>\",\n  \"majorDimension\": \"<string>\",\n  \"values\": [\n    [],\n    []\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "87b6313a-fcb3-4f02-91be-0c6a61da7b58",
+              "name": "Updated value range",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v4",
+                    "spreadsheets",
+                    ":spreadsheetId",
+                    "values",
+                    ":range"
+                  ],
+                  "host": [
+                    "sheets",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "valueInputOption",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "spreadsheetId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "range",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"range\": \"<string>\",\n  \"majorDimension\": \"<string>\",\n  \"values\": [\n    [],\n    []\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ec8bf5a8-489c-4def-ac62-1f2400059d7a",
+          "name": "Batch update a spreadsheet",
+          "request": {
+            "name": "Batch update a spreadsheet",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v4",
+                "spreadsheets",
+                "{{spreadsheetId}}:batchUpdate"
+              ],
+              "host": [
+                "sheets",
+                "googleapis",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "262ce69e-3ecd-464f-be88-9a6e5306ffcd",
+              "name": "Batch update result",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v4",
+                    "spreadsheets",
+                    "{{spreadsheetId}}:batchUpdate"
+                  ],
+                  "host": [
+                    "sheets",
+                    "googleapis",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://docs.googleapis.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "spreadsheetId"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/presentations https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/v2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "305d24b2-d81e-4cbe-b5f1-61bd80d608b8",
+    "name": "Google Workspace Suite (, , Slides, Gmail) Docs Sheets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 covering the most commonly used REST endpoints across the Google Docs API (docs.googleapis.com), Google Sheets API (sheets.googleapis.com), Google Slides API (slides.googleapis.com), and the Gmail API (gmail.googleapis.com). All services use Google OAuth 2.0 user or service-account credentials.",
+      "type": "text/plain"
+    }
+  }
+}
