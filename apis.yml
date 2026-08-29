@@ -62,7 +62,7 @@ apis:
     url: https://developers.google.com/slides/api
   - type: Authentication
     url: https://developers.google.com/slides/api/guides/authorizing
-  - type: Samples
+  - type: Examples
     url: https://developers.google.com/slides/samples
   - type: Pricing
     url: https://developers.google.com/slides/api/limits
@@ -104,7 +104,7 @@ apis:
     url: https://developers.google.com/slides/api
   - type: Authentication
     url: https://developers.google.com/slides/api/guides/authorizing
-  - type: Samples
+  - type: Examples
     url: https://developers.google.com/slides/samples
   - type: Pricing
     url: https://developers.google.com/slides/api/limits
@@ -146,7 +146,7 @@ apis:
     url: https://developers.google.com/slides/api
   - type: Authentication
     url: https://developers.google.com/slides/api/guides/authorizing
-  - type: Samples
+  - type: Examples
     url: https://developers.google.com/slides/samples
   - type: Pricing
     url: https://developers.google.com/slides/api/limits
@@ -188,7 +188,7 @@ apis:
     url: https://developers.google.com/slides/api
   - type: Authentication
     url: https://developers.google.com/slides/api/guides/authorizing
-  - type: Samples
+  - type: Examples
     url: https://developers.google.com/slides/samples
   - type: Pricing
     url: https://developers.google.com/slides/api/limits
