@@ -2,6 +2,18 @@ aid: google-suite-docs-sheets-slides-gmail
 name: Google Workspace Suite
 description: >-
   Collection of Google Workspace APIs including Docs, Sheets, Slides, and Gmail.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
