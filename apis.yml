@@ -203,6 +203,8 @@ apis:
   - type: Pricing
     url: https://developers.google.com/gmail/api/reference/quota
 common:
+  - type: Website
+    url: https://www.google.com/
   - type: AgenticAccess
     url: agentic-access/google-suite-docs-sheets-slides-gmail-agentic-access.yml
   - type: VulnerabilityDisclosure
